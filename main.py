@@ -12,16 +12,6 @@ from torchvision.utils import save_image
 
 from networks import Generator, Discriminator
 from utils import get_data_loader, generate_images, save_gif
-# from object_recognition.yolo_utils import infer_image, show_image
-
-logger = logging.getLogger('DCGAN MNIST')
-logger.setLevel(logging.DEBUG)
-ch = logging.StreamHandler()
-ch.setLevel(logging.DEBUG)
-formatter = logging.Formatter('[%(asctime)s] [%(name)s] [%(levelname)s] %(message)s')
-ch.setFormatter(formatter)
-logger.addHandler(ch)
-
 
 
 if __name__ == '__main__':
