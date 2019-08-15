@@ -24,7 +24,11 @@ Optional:
 
 Once everything is installed, you can go ahead and run the below command to train a model on 100 Epochs and store the sample outputs from generator in the ```results``` folder.
 
-```python main.py --num-epochs 100 --output-path ./results```
+```python main.py --num-epochs 100 --output-path ./results/ ```
+
+You can also generate sample output using a fixed noise vector (It's easier to interpret the output on a fixed noise. Ex: the above gif), use this
+
+```python main.py --num-epochs 100 --output-path ./results/ --use-fixed True ```
 
 
 
