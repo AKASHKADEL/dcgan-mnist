@@ -27,8 +27,10 @@ if __name__ == '__main__':
     parser.add_argument('--num-test-samples', type=int, default=16, help='Number of samples to visualize')
     parser.add_argument('--output-path', type=str, default='./results/', help='Path to save the images')
     parser.add_argument('--fps', type=int, default=5, help='frames-per-second value for the gif')
+    parser.add_argument('--use-fixed', type=bool, default=True, help='Boolean to use fixed noise or not')
 
     opt = parser.parse_args()
+    print(opt)
 
     # Gather MNIST Dataset    
     train_loader = get_data_loader(opt.batch_size)
@@ -96,8 +98,8 @@ if __name__ == '__main__':
                 print('Epoch [{}/{}], step [{}/{}], d_loss: {:.4f}, g_loss: {:.4f}, D(x): {:.2f}, Discriminator - D(G(x)): {:.2f}, Generator - D(G(x)): {:.2f}'.format(epoch+1, opt.num_epochs, 
                                                             i+1, num_batches, lossD.item(), lossG.item(), D_x, D_G_z1, D_G_z2))
         netG.eval()
-        generate_images(epoch, opt.output_path, fixed_noise, opt.num_test_samples, netG, device, use_fixed=True)
+        generate_images(epoch, opt.output_path, fixed_noise, opt.num_test_samples, netG, device, use_fixed=opt.use_fixed)
         netG.train()
 
     # Save gif:
-    save_gif(opt.output_path, opt.fps, fixed_noise=True)
+    save_gif(opt.output_path, opt.fps, fixed_noise=opt.use_fixed)
