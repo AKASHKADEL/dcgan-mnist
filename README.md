@@ -30,5 +30,9 @@ You can also generate sample output using a fixed noise vector (It's easier to i
 
 ```python main.py --num-epochs 100 --output-path ./results/ --use-fixed True ```
 
+## Results
+
+The above code will store 100 images in the folder ```./results/fixed_noise```, each storing the output after every epoch. Also, the imageio library will then take these 100 images a create a gif out of it with fps=5. The final gif will be stored in the same folder. ie., ```./results/fixed_noise/animated.gif```
+
 
 
