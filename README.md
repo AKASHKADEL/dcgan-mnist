@@ -38,7 +38,7 @@ The above code will store 100 images in the folder ```./results/fixed_noise```, 
 
 # References:
 
-
-
-
-
+[1] https://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf
+[2] https://arxiv.org/pdf/1511.06434.pdf
+[3] https://github.com/soumith/ganhacks
+[4] https://medium.com/activating-robotic-minds/up-sampling-with-transposed-convolution-9ae4f2df52d0
