@@ -27,7 +27,7 @@ if __name__ == '__main__':
     parser.add_argument('--num-test-samples', type=int, default=16, help='Number of samples to visualize')
     parser.add_argument('--output-path', type=str, default='./results/', help='Path to save the images')
     parser.add_argument('--fps', type=int, default=5, help='frames-per-second value for the gif')
-    parser.add_argument('--use-fixed', type=bool, default=True, help='Boolean to use fixed noise or not')
+    parser.add_argument('--use-fixed', action='store_true', help='Boolean to use fixed noise or not')
 
     opt = parser.parse_args()
     print(opt)
