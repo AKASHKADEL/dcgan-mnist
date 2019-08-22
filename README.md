@@ -28,7 +28,7 @@ Once everything is installed, you can go ahead and run the below command to trai
 
 You can also generate sample output using a fixed noise vector (It's easier to interpret the output on a fixed noise. Ex: the above gif), use this
 
-```python main.py --num-epochs 100 --output-path ./results/ --use-fixed True ```
+```python main.py --num-epochs 100 --output-path ./results/ --use-fixed ```
 
 You can change the model setting by playing with the learning rate, num_epochs, batch size, etc
 
