@@ -51,8 +51,8 @@ if __name__ == '__main__':
     optimizerG = optim.Adam(netG.parameters(), lr=opt.g_lr)
     
     # initialize other variables
-    real_label = 1
-    fake_label = 0
+    real_label = 1.
+    fake_label = 0.
     num_batches = len(train_loader)
     fixed_noise = torch.randn(opt.num_test_samples, 100, 1, 1, device=device)
 
